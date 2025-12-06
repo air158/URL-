@@ -13,8 +13,8 @@ export const useUrlParams = () => {
       const addEntry = (key: string, value: string) => {
         entries.push({
           id: `param-${uniqueIdCounter++}-${Date.now()}`,
-          key: decodeURIComponent(key),
-          value: decodeURIComponent(value),
+          key: key,
+          value: value,
         });
       };
 

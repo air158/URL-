@@ -49,22 +49,22 @@ function App() {
                   key={param.id} 
                   className="group relative bg-slate-900 border border-slate-800 rounded-xl p-4 transition-all hover:border-slate-700 hover:shadow-lg hover:shadow-indigo-500/5"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
                     
                     {/* Key & Value Container */}
-                    <div className="flex-1 min-w-0 overflow-hidden">
-                      <div className="flex items-center space-x-2 mb-1">
-                        <span className="px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-800 text-slate-400 border border-slate-700">
+                    <div className="flex-1 min-w-0 w-full">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <span className="px-2 py-0.5 rounded text-xs font-mono font-medium bg-slate-800 text-slate-400 border border-slate-700 break-all">
                           {param.key}
                         </span>
                       </div>
-                      <div className="font-mono text-sm text-indigo-300 truncate pr-4" title={param.value}>
+                      <div className="font-mono text-sm text-indigo-300 break-all whitespace-pre-wrap pr-0 md:pr-4 leading-relaxed">
                         {param.value || <span className="text-slate-600 italic">空值</span>}
                       </div>
                     </div>
 
                     {/* Action Button */}
-                    <div className="shrink-0">
+                    <div className="shrink-0 w-full md:w-auto mt-2 md:mt-0">
                       <button
                         onClick={() => copyToClipboard(param.value, param.key)}
                         className="flex items-center justify-center space-x-2 w-full md:w-auto px-4 py-2 bg-slate-800 hover:bg-indigo-600 text-slate-300 hover:text-white rounded-lg transition-colors border border-slate-700 hover:border-indigo-500 active:scale-95"
