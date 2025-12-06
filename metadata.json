@@ -1,0 +1,5 @@
+{
+  "name": "URL Param Copier",
+  "description": "A utility tool to parse URL parameters and provide one-click copying for keys and values.",
+  "requestFramePermissions": []
+}
